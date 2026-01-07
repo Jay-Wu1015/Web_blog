@@ -1,0 +1,27 @@
+<link rel="stylesheet" href="css/style.css">
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <title>信用卡回饋分享</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<header>
+  <h1>信用卡回饋分享</h1>
+  <p>實際回饋 × 使用心得 × 懶人整理</p>
+</header>
+
+<main>
+  {% for post in posts %}
+    <article>
+      <h2>
+        <a href="/post/{{ post.slug }}">{{ post.title }}</a>
+      </h2>
+    </article>
+  {% endfor %}
+</main>
+
+</body>
+</html>
